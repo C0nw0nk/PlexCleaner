@@ -10,10 +10,10 @@
 :: Script Settings
 
 :: Directory of TV Shows
-set media_path_TV="\\Con-NAS\MEDIA-SERVER\TV Shows"
+set media_path_TV="\\NAS\FOLDER\TV Shows"
 
 :: Directory of Movies
-set media_path_Movies="\\Con-NAS\MEDIA-SERVER\Movies"
+set media_path_Movies="\\NAS\FOLDER\Movies"
 
 :: End Edit DO NOT TOUCH ANYTHING BELOW THIS POINT UNLESS YOU KNOW WHAT YOUR DOING!
 
