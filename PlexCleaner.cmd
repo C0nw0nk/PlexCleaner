@@ -21,27 +21,6 @@ set media_path_Movies="\\NAS\FOLDER\Movies"
 
 TITLE PlexCleaner
 
-::Elevate to admin rights
-:start
-net session >nul 2>&1
-if %errorlevel% == 0 (
-goto :admin
-) else (
-@pushd "%~dp0" & fltmc | find ^".^" && (powershell start '%~f0' ' %*' -verb runas 2>nul && exit /b)
-)
-goto :start
-:admin
-
-:start_loop
-if "%~1"=="" (
-start /wait /B "" "%~dp0%~nx0" go 2^>Nul
-) else (
-goto begin
-)
-goto start_loop
-:begin
-::End elevation to admin
-
 set root_path="%~dp0"
 
 if %PROCESSOR_ARCHITECTURE%==x86 (
