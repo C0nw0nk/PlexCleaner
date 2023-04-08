@@ -10,9 +10,11 @@
 :: Script Settings
 
 :: Directory of TV Shows
+:: Path format can be Network share or Drive name "C:\path\TV Shows"
 set media_path_TV="\\NAS\FOLDER\TV Shows"
 
 :: Directory of Movies
+:: Path format can be Network share or Drive name "C:\path\Movies"
 set media_path_Movies="\\NAS\FOLDER\Movies"
 
 :: End Edit DO NOT TOUCH ANYTHING BELOW THIS POINT UNLESS YOU KNOW WHAT YOUR DOING!
