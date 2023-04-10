@@ -115,6 +115,9 @@ del "%root_path:"=%%~n0.vbs"
 
 if not exist "%root_path:"=%win-x64\PlexCleaner.exe" (
 
+winget install Microsoft.DotNet.DesktopRuntime.6 >nul
+winget install Microsoft.DotNet.DesktopRuntime.7 >nul
+
 if not defined plexcleaner_exe (
 	set downloadurl=https://github.com/ptr727/PlexCleaner/releases/latest/download/PlexCleaner.7z
 	set delete_download=0
