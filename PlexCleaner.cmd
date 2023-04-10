@@ -47,10 +47,6 @@ echo >"%root_path:"=%win-x64\PlexCleaner.log"
 
 "%root_path:"=%win-x64\PlexCleaner" process --parallel --settingsfile "%root_path:"=%win-x64\PlexCleaner.json" --logfile "%root_path:"=%win-x64\PlexCleaner.log" --mediafiles %media_path_Movies%
 
-echo Complete.
-
-pause
-
 ::End PlexCleaner code
 
 goto :end_script
