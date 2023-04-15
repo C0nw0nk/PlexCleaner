@@ -17,6 +17,11 @@ set media_path_TV="\\NAS\FOLDER\TV Shows"
 :: Path format can be Network share or Drive name "C:\path\Movies"
 set media_path_Movies="\\NAS\FOLDER\Movies"
 
+:: Instead of just closing the window after our automated tasking we pause to view and check once your happy you can set this to 0
+:: 1 enabled
+:: 0 disabled
+set pause_window=1
+
 :: End Edit DO NOT TOUCH ANYTHING BELOW THIS POINT UNLESS YOU KNOW WHAT YOUR DOING!
 
 TITLE PlexCleaner
@@ -157,5 +162,7 @@ echo aef69d48c864bcd72d15163897773d314187f6a9af350808719796
 
 goto :start_exe
 :end_script
+
+if %pause_window% == 1 pause
 
 exit
