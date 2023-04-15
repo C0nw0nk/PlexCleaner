@@ -22,6 +22,16 @@ set media_path_Movies="\\NAS\FOLDER\Movies"
 :: 0 disabled
 set pause_window=1
 
+:: Wait number of seconds
+:: 0 disabled
+:: 60 = 60 seconds etc
+set wait_interval=0
+
+:: If you want this script to not exit once finished and after task complete / wait interval passed recheck plex folders in a loop
+:: 1 enabled
+:: 0 disabled
+set looping=1
+
 :: End Edit DO NOT TOUCH ANYTHING BELOW THIS POINT UNLESS YOU KNOW WHAT YOUR DOING!
 
 TITLE PlexCleaner
@@ -164,5 +174,9 @@ goto :start_exe
 :end_script
 
 if %pause_window% == 1 pause
+
+if not %wait_interval% == 0 TIMEOUT /T %wait_interval%
+
+if %looping% == 1 goto :start_exe
 
 exit
