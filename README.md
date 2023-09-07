@@ -5,3 +5,15 @@ PlexCleaner Utility to optimize media files for Direct Play in Plex, Emby, Jelly
 # Usage
 
 Just edit the folder paths in the settings section of `PlexCleaner.cmd` then run `PlexCleaner.cmd` and enjoy saving your server CPU consumption and effort having to transcode videos in future when everything can be instantly ready for direct playback compatibility.
+
+
+
+# Other Optional useful tools
+
+On plex / Emby i found videos trying to transcode because of forced subtitles flags even so i made this to fix that.
+
+https://github.com/C0nw0nk/DisableForcedSubtitles/
+
+On plex / emby i had a issue with tv series being numbered from 1-100 and having no season or information so i moved them to season folders and made this to rename the videos in order.
+
+https://github.com/C0nw0nk/TV-Season-Ordering/
