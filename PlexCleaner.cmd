@@ -9,13 +9,9 @@
 
 :: Script Settings
 
-:: Directory of TV Shows
-:: Path format can be Network share or Drive name "C:\path\TV Shows"
-set media_path_TV="\\NAS\FOLDER\TV Shows"
-
-:: Directory of Movies
+:: Directory to scan
 :: Path format can be Network share or Drive name "C:\path\Movies"
-set media_path_Movies="\\NAS\FOLDER\Movies"
+set media_path="\\NAS\FOLDER\Movies"
 
 :: Instead of just closing the window after our automated tasking we pause to view and check once your happy you can set this to 0
 :: 1 enabled
@@ -25,7 +21,7 @@ set pause_window=1
 :: Wait number of seconds
 :: 0 disabled
 :: 60 = 60 seconds etc
-set wait_interval=0
+set wait_interval=120
 
 :: If you want this script to not exit once finished and after task complete / wait interval passed recheck plex folders in a loop
 :: 1 enabled
@@ -33,6 +29,18 @@ set wait_interval=0
 set looping=1
 
 :: End Edit DO NOT TOUCH ANYTHING BELOW THIS POINT UNLESS YOU KNOW WHAT YOUR DOING!
+
+:: Make script configurable via command line with arguements example
+:: "C:\path\PlexCleaner.cmd" "\\NAS\path" "pause_window" "wait_interval" "looping" 2^>nul
+:: Working example
+:: "C:\path\PlexCleaner.cmd" "\\NAS\path" "1" "120" "1" 2^>nul
+
+if "%~1"=="" goto :script_arguments_not_defined
+set media_path=%~1
+set pause_window=%~2
+set wait_interval=%~3
+set looping=%~4
+:script_arguments_not_defined
 
 TITLE PlexCleaner
 
@@ -58,9 +66,7 @@ if not exist "%root_path:"=%win-x64\PlexCleaner.log" (
 echo >"%root_path:"=%win-x64\PlexCleaner.log"
 )
 
-"%root_path:"=%win-x64\PlexCleaner" process --parallel --settingsfile "%root_path:"=%win-x64\PlexCleaner.json" --logfile "%root_path:"=%win-x64\PlexCleaner.log" --mediafiles %media_path_TV%
-
-"%root_path:"=%win-x64\PlexCleaner" process --parallel --settingsfile "%root_path:"=%win-x64\PlexCleaner.json" --logfile "%root_path:"=%win-x64\PlexCleaner.log" --mediafiles %media_path_Movies%
+"%root_path:"=%win-x64\PlexCleaner" process --parallel --settingsfile %root_path:"=%win-x64\PlexCleaner.json --logfile "%root_path:"=%win-x64\PlexCleaner.log" --mediafiles %media_path%
 
 ::End PlexCleaner code
 
@@ -179,4 +185,4 @@ if not %wait_interval% == 0 TIMEOUT /T %wait_interval%
 
 if %looping% == 1 goto :start_exe
 
-exit
+exit /b
