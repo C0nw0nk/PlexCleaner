@@ -1,0 +1,160 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ptr727/PlexCleaner/develop/PlexCleaner.schema.json",
+  "SchemaVersion": 3,
+  "ToolsOptions": {
+    "UseSystem": false,
+    "RootPath": ".\\Tools\\",
+    "RootRelative": true,
+    "AutoUpdate": false
+  },
+  "ProcessOptions": {
+    "KeepOriginalLanguage": true,
+    "RemoveClosedCaptions": true,
+    "SetIetfLanguageTags": true,
+    "SetTrackFlags": true,
+    "KeepExtensions": [
+      ".partial~",
+      ".nfo",
+      ".jpg",
+      ".srt",
+      ".smi",
+      ".ssa",
+      ".ass",
+      ".vtt",
+      ".mp3"
+    ],
+    "ReMuxExtensions": [
+      ".avi",
+      ".mxf",
+      ".m2p",
+      ".ps",
+      ".m2ts",
+      ".mts",
+      ".ts",
+      ".tsv",
+      ".vob",
+      ".evo",
+      ".3gp",
+      ".3g2",
+      ".f4v",
+      ".flv",
+      ".mp4",
+      ".m4v",
+      ".asf",
+      ".wmv",
+      ".dv",
+      ".mov",
+      ".qt",
+      ".ogg",
+      ".ogv",
+      ".ogx",
+      ".webm",
+      ".rmvb",
+      ".divx"
+    ],
+    "ReEncodeVideo": [
+      {
+        "Format": "mpeg2video"
+      },
+      {
+        "Format": "vc1"
+      },
+      {
+        "Format": "wmv3"
+      },
+      {
+        "Format": "msrle"
+      },
+      {
+        "Format": "rawvideo"
+      },
+      {
+        "Format": "indeo5"
+      },
+      {
+        "Format": "h264",
+        "Profile": "Constrained Baseline@30"
+      },
+      {
+        "Format": "mpeg4",
+        "Codec": "dx50"
+      },
+      {
+        "Format": "msmpeg4v2",
+        "Codec": "mp42"
+      },
+      {
+        "Format": "msmpeg4v3",
+        "Codec": "div3"
+      }
+    ],
+    "ReEncodeAudioFormats": [
+      "flac",
+      "mp2",
+      "vorbis",
+      "wmapro",
+      "opus",
+      "wmav2",
+      "adpcm_ms",
+      "pcm_u8",
+      "pcm_s16le"
+    ],
+    "KeepLanguages": [
+      "en",
+      "cpe"
+    ],
+    "PreferredAudioFormats": [
+      "truehd atmos",
+      "truehd",
+      "dts-hd master audio",
+      "dts-hd high resolution audio",
+      "dts",
+      "e-ac-3",
+      "ac-3"
+    ],
+    "DeleteEmptyFolders": true,
+    "DeleteUnwantedExtensions": true,
+    "ReMux": true,
+    "DeInterlace": true,
+    "ReEncode": true,
+    "SetUnknownLanguage": true,
+    "DefaultLanguage": "en",
+    "RemoveUnwantedLanguageTracks": true,
+    "RemoveDuplicateTracks": true,
+    "RemoveTags": true,
+    "UseSidecarFiles": true,
+    "SidecarUpdateOnToolChange": false,
+    "Verify": true,
+    "RestoreFileTimestamp": false,
+    "FileIgnoreList": [
+    ]
+  },
+  "ConvertOptions": {
+    "FfMpegOptions": {
+      "Video": "hevc_nvenc -preset medium -pix_fmt p010le -bsf:v mpeg4_unpack_bframes -vf 'format=nv12,hwupload'",
+      "Audio": "ac3",
+      "Global": "-analyzeduration 2147483647 -probesize 2147483647 -hwaccel cuda -hwaccel_output_format cuda",
+      "Output": "-max_muxing_queue_size 1024 -abort_on empty_output"
+    },
+	"HandBrakeOptions": {
+      //--quality 27 --encoder-profile main --encoder-level 4 --colorspace bt709 --crop-mode none --enable-qsv-decoding
+      "Video": "nvenc_h265_10bit -Z \"H.265 MKV 1080p30\" --encoder-preset slowest --optimize --colorspace bt709 --enable-qsv-decoding --quality 27 --encoder-profile main10 --encoder-level 4 --two-pass --no-turbo",
+      "Audio": "copy --audio-fallback ac3"
+    }
+  },
+  "VerifyOptions": {
+    "AutoRepair": true,
+    "DeleteInvalidFiles": false,
+    "RegisterInvalidFiles": false,
+    "MinimumDuration": 300,
+    "VerifyDuration": 0,
+    "IdetDuration": 0,
+    "MaximumBitrate": 100000000,
+    "MinimumFileAge": 0
+  },
+  "MonitorOptions": {
+    "MonitorWaitTime": 60,
+    "FileRetryWaitTime": 5,
+    "FileRetryCount": 2
+  }
+}
