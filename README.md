@@ -10,9 +10,19 @@ Just edit the folder paths in the settings section of `PlexCleaner.cmd` then run
 
 # Other Optional useful tools
 
+### H265 X265 Encode Entire media folders
+
+I made this to reduce the size of my plex/emby library since allot of h264/x264 encoded videos was 30GB in size each by doing this i made 30gb videos 2gb in size and 2gb videos became 600mb it is a huge saving allowing me to add more media to the server.
+
+https://github.com/C0nw0nk/PlexCleaner-H265
+
+### Disable Forced Subtitles
+
 On plex / Emby i found videos trying to transcode because of forced subtitles flags even so i made this to fix that.
 
 https://github.com/C0nw0nk/DisableForcedSubtitles/
+
+### TV Season Ordering
 
 On plex / emby i had a issue with tv series being numbered from 1-100 and having no season or information so i moved them to season folders and made this to rename the videos in order.
 
