@@ -36,7 +36,7 @@ set looping=1
 :: "C:\path\PlexCleaner.cmd" "\\NAS\path" "1" "120" "1" 2^>nul
 
 if "%~1"=="" goto :script_arguments_not_defined
-set media_path=%~1
+set media_path="%~1"
 set pause_window=%~2
 set wait_interval=%~3
 set looping=%~4
