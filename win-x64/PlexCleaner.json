@@ -112,7 +112,7 @@
       "e-ac-3",
       "ac-3"
     ],
-    "DeleteEmptyFolders": true,
+    "DeleteEmptyFolders": false,
     "DeleteUnwantedExtensions": true,
     "ReMux": true,
     "DeInterlace": true,
