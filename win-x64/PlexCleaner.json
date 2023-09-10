@@ -5,7 +5,7 @@
     "UseSystem": false,
     "RootPath": ".\\Tools\\",
     "RootRelative": true,
-    "AutoUpdate": false
+    "AutoUpdate": true
   },
   "ProcessOptions": {
     "KeepOriginalLanguage": true,
