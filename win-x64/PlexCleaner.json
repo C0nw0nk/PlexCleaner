@@ -131,7 +131,7 @@
   },
   "ConvertOptions": {
     "FfMpegOptions": {
-      "Video": "hevc_nvenc -preset medium -pix_fmt p010le -bsf:v mpeg4_unpack_bframes -vf 'format=nv12,hwupload'",
+      "Video": "hevc_nvenc -crf 27 -preset veryslow",
       "Audio": "ac3",
       "Global": "-analyzeduration 2147483647 -probesize 2147483647 -hwaccel cuda -hwaccel_output_format cuda",
       "Output": "-max_muxing_queue_size 1024 -abort_on empty_output"
