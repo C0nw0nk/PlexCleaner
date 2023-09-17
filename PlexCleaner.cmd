@@ -10,8 +10,11 @@
 :: Script Settings
 
 :: Directory to scan
-:: Path format can be Network share or Drive name "C:\path\Movies"
-set media_path="\\NAS\FOLDER\Movies"
+:: Path format can be Network share or Drive name
+:: example
+:: set media_path="C:\path\Movies"
+:: set media_path="\\NAS\FOLDER\Movies"
+set media_path=""
 
 :: Instead of just closing the window after our automated tasking we pause to view and check once your happy you can set this to 0
 :: 1 enabled
@@ -41,6 +44,11 @@ set pause_window=%~2
 set wait_interval=%~3
 set looping=%~4
 :script_arguments_not_defined
+
+if "%media_path:"=%"=="" (
+echo Please specify the destination for example C:\path\Movies OR \\NAS\FOLDER\Movies
+set /p "media_path="
+)
 
 TITLE PlexCleaner
 
