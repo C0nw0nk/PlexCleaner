@@ -33,6 +33,8 @@ set looping=1
 
 :: End Edit DO NOT TOUCH ANYTHING BELOW THIS POINT UNLESS YOU KNOW WHAT YOUR DOING!
 
+TITLE PlexCleaner
+
 :: Make script configurable via command line with arguements example
 :: "C:\path\PlexCleaner.cmd" "\\NAS\path" "pause_window" "wait_interval" "looping" 2^>nul
 :: Working example
@@ -49,8 +51,6 @@ if "%media_path:"=%"=="" (
 echo Please specify the destination for example C:\path\Movies OR \\NAS\FOLDER\Movies
 set /p "media_path="
 )
-
-TITLE PlexCleaner
 
 set root_path="%~dp0"
 
