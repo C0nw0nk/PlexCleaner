@@ -138,7 +138,7 @@
     },
 	"HandBrakeOptions": {
       //--quality 27 --encoder-profile main --encoder-level 4 --colorspace bt709 --crop-mode none --enable-qsv-decoding
-      "Video": "nvenc_h265_10bit -Z \"H.265 MKV 1080p30\" --encoder-preset slowest --optimize --colorspace bt709 --enable-qsv-decoding --quality 27 --encoder-profile main10 --encoder-level 4 --two-pass --no-turbo",
+      "Video": "nvenc_h265_10bit -Z \"H.265 MKV 1080p30\" --encoder-preset slowest --optimize --colorspace bt709 --enable-qsv-decoding --quality 27 --encoder-profile main10 --encoder-level 4 --two-pass --no-turbo --subtitle-burned=\"none\"",
       "Audio": "copy --audio-fallback ac3"
     }
   },
