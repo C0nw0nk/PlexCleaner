@@ -20,10 +20,24 @@ https://github.com/C0nw0nk/PlexCleaner-H265
 
 On plex / Emby i found videos trying to transcode because of forced subtitles flags even so i made this to fix that.
 
-https://github.com/C0nw0nk/DisableForcedSubtitles/
+https://github.com/C0nw0nk/DisableForcedSubtitles
+
+### Remove Subtitles
+
+Unlike the above this will remove all subtitles from media folders you choose.
+
+https://github.com/C0nw0nk/RemoveSubtitles
 
 ### TV Season Ordering
 
 On plex / emby i had a issue with tv series being numbered from 1-100 and having no season or information so i moved them to season folders and made this to rename the videos in order.
 
-https://github.com/C0nw0nk/TV-Season-Ordering/
+https://github.com/C0nw0nk/TV-Season-Ordering
+
+### AV1 
+
+https://github.com/C0nw0nk/PlexCleaner-AV1
+
+### VP9
+
+https://github.com/C0nw0nk/PlexCleaner-VP9
