@@ -22,6 +22,14 @@ On plex / Emby i found videos trying to transcode because of forced subtitles fl
 
 https://github.com/C0nw0nk/DisableForcedSubtitles
 
+#### Extra Features of Disable Forced Subtitles
+
+```
+Option to Remove chapter markers
+
+Option to Remove tags and global tags
+```
+
 ### Remove Subtitles
 
 Unlike the above this will remove all subtitles from media folders you choose.
