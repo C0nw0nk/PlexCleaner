@@ -29,7 +29,7 @@ set wait_interval=120
 :: If you want this script to not exit once finished and after task complete / wait interval passed recheck plex folders in a loop
 :: 1 enabled
 :: 0 disabled
-set looping=1
+set looping=0
 
 :: End Edit DO NOT TOUCH ANYTHING BELOW THIS POINT UNLESS YOU KNOW WHAT YOUR DOING!
 
