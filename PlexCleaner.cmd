@@ -76,6 +76,10 @@ echo >"%root_path:"=%win-x64\PlexCleaner.log"
 
 "%root_path:"=%win-x64\PlexCleaner" process --parallel --settingsfile "%root_path:"=%win-x64\PlexCleaner.json" --logfile "%root_path:"=%win-x64\PlexCleaner.log" --mediafiles "%media_path:"=%"
 
+if exist "%root_path:"=%DisableForceSubtitles.cmd" (
+call "%root_path:"=%DisableForceSubtitles.cmd" "%media_path:"=%" "1" "1" "0" "0" "0" "0"
+)
+
 ::End PlexCleaner code
 
 goto :end_script
