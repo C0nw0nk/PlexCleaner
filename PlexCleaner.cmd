@@ -80,6 +80,10 @@ if exist "%root_path:"=%DisableForceSubtitles.cmd" (
 call "%root_path:"=%DisableForceSubtitles.cmd" "%media_path:"=%" "1" "1" "0" "0" "0" "0"
 )
 
+if exist "%root_path:"=%RemoveSubtitles.cmd" (
+call "%root_path:"=%RemoveSubtitles.cmd" "%media_path:"=%" "-key1 xsub -key2 dvb_subtitle -key3 dvb_teletext -key4 dvd_subtitle -key5 hdmv_pgs_subtitle -key6 hdmv_text_subtitle -key7 arib_caption -key8 eia_608" "1" "1" "0" "0" "0" "0"
+)
+
 ::End PlexCleaner code
 
 goto :end_script
