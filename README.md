@@ -32,7 +32,7 @@ Option to Remove tags and global tags
 
 ### Remove Subtitles
 
-Unlike the above this will remove all subtitles from media folders you choose.
+This will remove specified codecs of subtitles from media folders you choose. For example IMAGE based subtitles xsub vobsubs will cause media to transcode when selected by removing these subtitles you can instead have plex emby jellyfin rely on using opensubtitles what are text based subtitiles for media that will not cause transcoding.
 
 https://github.com/C0nw0nk/RemoveSubtitles
 
