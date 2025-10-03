@@ -29,7 +29,7 @@ set wait_interval=120
 :: If you want this script to not exit once finished and after task complete / wait interval passed recheck plex folders in a loop
 :: 1 enabled
 :: 0 disabled
-set looping=0
+set looping=1
 
 :: End Edit DO NOT TOUCH ANYTHING BELOW THIS POINT UNLESS YOU KNOW WHAT YOUR DOING!
 
@@ -74,7 +74,7 @@ if not exist "%root_path:"=%win-x64\PlexCleaner.log" (
 echo >"%root_path:"=%win-x64\PlexCleaner.log"
 )
 
-"%root_path:"=%win-x64\PlexCleaner" process --parallel --settingsfile "%root_path:"=%win-x64\PlexCleaner.json" --logfile "%root_path:"=%win-x64\PlexCleaner.log" --mediafiles "%media_path:"=%"
+"%root_path:"=%win-x64\PlexCleaner" process --settingsfile "%root_path:"=%win-x64\PlexCleaner.json" --logfile "%root_path:"=%win-x64\PlexCleaner.log" --mediafiles "%media_path:"=%"
 
 if exist "%root_path:"=%DisableForceSubtitles.cmd" (
 call "%root_path:"=%DisableForceSubtitles.cmd" "%media_path:"=%" "1" "1" "0" "0" "0" "0"
